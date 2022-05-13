@@ -37,7 +37,7 @@ View(beauty)
 ?beauty
 ```
 
-```{r summarise the number of female professores}
+```{r summarise the number of female professores, include=FALSE}
 beauty %>%
   summarise("Number of Female Professors"=sum(female))
 ```

@@ -1,11 +1,35 @@
 ---
-title: "hw-01-answers"
-output: html_document
+title: "Homework 1 Answers (Revision)"
+author: "Ellen Tully"
+output: 
+  tufte::tufte_html:
+    css: ../hw.css
+    tufte_variant: "envisioned"
+    highlight: pygments
+link-citations: yes
 date: '2022-05-13'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r sort out the packages}
+install.packages("devtools")
+devtools::install_github("quinfer/tsfe")
+devtools::install_github("avehtari/ROS-Examples", subdir = "rpackage")
+```
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  out.width = "80%",
+  fig.asp = 0.618,
+  fig.width = 10
+)
+library(tidyverse)
+library(rosdata)
+library(ggrepel)
 ```
 
 ## R Markdown

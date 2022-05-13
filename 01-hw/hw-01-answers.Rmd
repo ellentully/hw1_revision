@@ -32,13 +32,20 @@ library(rosdata)
 library(ggrepel)
 ```
 
-```{r view-data, include=FALSE}
+```{r view data and definition, include=FALSE}
 View(beauty)
 ?beauty
+```
+
+```{r summarise the number of female professores}
+beauty %>%
+  summarise("Number of Female Professors"=sum(female))
 ```
 
 # Exercise Answers
 
 1.  According to the data viewer, there are 463 evaluations.
 
-2.  Again, according to the data viewer, there are 8 variables for the evaluation. 
+2.  Again, according to the data viewer, there are 8 variables for the evaluation.
+
+3.  There are 195 female professors.

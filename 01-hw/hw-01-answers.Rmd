@@ -39,4 +39,6 @@ View(beauty)
 
 # Exercise Answers
 
-1.  According to the data viewer, there are 463 observations recorded with the 8 variables. 
+1.  According to the data viewer, there are 463 evaluations.
+
+2.  Again, according to the data viewer, there are 8 variables for the evaluation. 

@@ -14,13 +14,13 @@ date: '2022-05-13'
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r sort out the packages}
+```{r sort out the packages, include=FALSE}
 install.packages("devtools")
 devtools::install_github("quinfer/tsfe")
 devtools::install_github("avehtari/ROS-Examples", subdir = "rpackage")
 ```
 
-```{r include = FALSE}
+```{r include = FALSE, include=FALSE}
 knitr::opts_chunk$set(
   eval = FALSE,
   out.width = "80%",
@@ -32,7 +32,7 @@ library(rosdata)
 library(ggrepel)
 ```
 
-```{r view-data}
+```{r view-data, include=FALSE}
 View(beauty)
 ?beauty
 ```

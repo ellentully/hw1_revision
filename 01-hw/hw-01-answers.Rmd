@@ -34,4 +34,9 @@ library(ggrepel)
 
 ```{r view-data}
 View(beauty)
+?beauty
 ```
+
+# Exercise Answers
+
+1.  According to the data viewer, there are 463 observations recorded with the 8 variables. 

@@ -41,6 +41,25 @@ View(beauty)
 beauty %>%
   summarise("Number of Female Professors"=sum(female))
 ```
+```{r visualise data, eval = TRUE, echo = FALSE, fig.fullwidth = TRUE}
+ggplot(beauty, aes(x = eval, y = beauty)) +
+  geom_point() +
+  theme_minimal() +
+  labs(x = "Student Evaluation of Teaching Score", y = "Professor Beauty") +
+  geom_smooth(method='lm',se = FALSE)
+```
+
+The following visualization plots the student evaluation of the professor against their assessed beauty.
+The diagonal line on the plot is the $x = y$ line; fitted using OLS.
+
+```{r eval = TRUE, echo = FALSE, fig.fullwidth = TRUE}
+# create viz
+ggplot(beauty, aes(x = eval, y = beauty)) +
+  geom_point() +
+  theme_grey() +
+  labs(x = "Student evaluaiton of teaching score", y = "Professor beauty") +
+  geom_smooth(method='lm',se = FALSE)
+```
 
 The following visualization plots the student evaluation of the professor against their assessed beauty.
 The diagonal line on the plot is the $x = y$ line; fitted using OLS.

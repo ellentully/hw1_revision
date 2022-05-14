@@ -281,8 +281,14 @@ beauty %>%
   arrange(age)
 
 ```
+```{r attempt 1, eval=TRUE}
+beauty %>% 
+  group_by(female,age) %>%
+  tally(sort = TRUE) %>%
+  arrange(-female, n, age)
+```
 
-1.  Based on the previous output we can easily identify the most common sex at each professor age, but the output is sorted by `n` (the frequencies) as opposed to being organized by the `female`. Build on the pipeline to arrange the results so that they're arranged by `female` first, and then `n`. This means you will need to add one more step to the pipeline, and you have two options: `arrange(age, n)` or `arrange(n, age)`. You should try both and decide which one organizes the output by species and then ranks the names in order of frequency for each species.
+4.  Based on the previous output we can easily identify the most common sex at each professor age, but the output is sorted by `n` (the frequencies) as opposed to being organized by the `female`. Build on the pipeline to arrange the results so that they're arranged by `female` first, and then `n`. This means you will need to add one more step to the pipeline, and you have two options: `arrange(age, n)` or `arrange(n, age)`. You should try both and decide which one organizes the output by species and then ranks the names in order of frequency for each species.
 
 🧶 ✅ ⬆️ *Write your answer in your R Markdown document under Exercise 4. In this exercise you're asked to complete the code provided for you. You should insert the code in the code chunk provided for you, knit the document to see the output, and then write your narrative for the answer based on the output of this function, and knit again to see your narrative, code, and output in the resulting document. Then, commit your changes with a commit message that says "Completed Exercise 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
@@ -293,12 +299,12 @@ The diagonal line on the plot is the $x = y$ line; fitted using OLS.
 # create viz
 ggplot(beauty, aes(x = eval, y = beauty)) +
   geom_point() +
-  theme_minimal() +
+  theme_grey() +
   labs(x = "Student evaluaiton of teaching score", y = "Professor beauty") +
   geom_smooth(method='lm',se = FALSE)
 ```
 
-1.  Is the relationship between the two variables  positive or negative? What does this mean in context of the data?
+1.  Is the relationship between the two variables positive or negative? What does this mean in context of the data?
 
 🧶 ✅ ⬆️ *Now is a good time to commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline. You should confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub.*
 

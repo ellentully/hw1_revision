@@ -42,10 +42,24 @@ beauty %>%
   summarise("Number of Female Professors"=sum(female))
 ```
 
+The following visualization plots the student evaluation of the professor against their assessed beauty.
+The diagonal line on the plot is the $x = y$ line; fitted using OLS.
+
+```{r eval = TRUE, echo = FALSE, fig.fullwidth = TRUE}
+# create viz
+ggplot(beauty, aes(x = eval, y = beauty)) +
+  geom_point() +
+  theme_grey() +
+  labs(x = "Student evaluaiton of teaching score", y = "Professor beauty") +
+  geom_smooth(method='lm',se = FALSE)
+```
+
 # Exercise Answers
 
 1.  According to the data viewer, there are 463 evaluations.
 
 2.  Again, according to the data viewer, there are 8 variables for the evaluation.
 
-3.  There are 195 female professors.
+3. There are 195 female professors.
+
+4. The relationship between the evaluation and beauty rating is positive. In the context of the data, in a higher evaluation, the trend diplays a higher beauty score.
